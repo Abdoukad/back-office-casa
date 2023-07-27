@@ -1,0 +1,71 @@
+/* Style pour l'en-tête de la carte */
+.card-header {
+  font-weight: bold;
+  background-color: #f8f9fa;
+}
+
+/* Style pour la carte de demande */
+.request-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
+  transition: all 0.3s ease; /* Transition pour l'effet de survol */
+}
+
+/* Effet de survol pour la carte de demande */
+.request-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre portée plus importante */
+  transform: translateY(-4px); /* Légère élévation de la carte */
+}
+
+/* Style pour le pied de page de la carte */
+.card-footer {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Style pour le texte de la carte */
+.card-text {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Style pour le titre de la carte */
+.card-title {
+  font-size: 1.4rem;
+}
+
+/* Style pour les boutons de petite taille */
+.btn-sm {
+  font-weight: bold;
+}
+
+/* Styles pour les icônes - couleurs personnalisées */
+.icon-person {
+  color: #007bff;
+}
+
+.icon-envelope {
+  color: #28a745;
+}
+
+.icon-telephone {
+  color: #dc3545;
+}
+
+.icon-chat-text {
+  color: #ffc107;
+}
+
+.icon-card-text {
+  color: #17a2b8;
+}
+
+.icon-calendar-event {
+  color: #6c757d;
+}
+
+.icon-trash {
+  color: #dc3545;
+}
+
+.icon-archive {
+  color: #ffc107;
+}

@@ -1,0 +1,20 @@
+<!-- Le h2 est le titre de la page "Admin" -->
+<h2>Admin</h2>
+
+<nav>
+  <!-- Lien vers le tableau de bord (Dashboard). "routerLink" définit l'URL de la route à laquelle ce lien doit naviguer.
+  "routerLinkActive" ajoute la classe CSS "active" lorsque la route est active.
+  "routerLinkActiveOptions" avec "{ exact: true }" signifie que la classe "active" est ajoutée seulement lorsque l'URL correspond exactement.
+  "ariaCurrentWhenActive" est une directive ARIA pour les technologies d'assistance, indiquant que cette page est la page actuelle lorsque le lien est actif. -->
+  <a routerLink="./" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" ariaCurrentWhenActive="page">Dashboard</a>
+
+  <!-- Lien vers la page des demandes de contact. Les attributs fonctionnent de la même manière que décrit précédemment. -->
+  <a routerLink="./contact-requests" routerLinkActive="active" ariaCurrentWhenActive="page">Demandes de contact</a>
+
+  <!-- Lien vers la page des demandes de contact archivées. Les attributs fonctionnent de la même manière que décrit précédemment. -->
+  <a routerLink="./archived-requests" routerLinkActive="active">Demandes de contact archivées</a>
+
+</nav>
+
+<!-- Le "router-outlet" est un placeholder que Angular remplace dynamiquement en fonction de la route actuelle. -->
+<router-outlet></router-outlet>

@@ -1,0 +1,53 @@
+<!-- Container principal -->
+<div class="container mt-5">
+  <!-- Carte principale -->
+  <div class="card">
+    <!-- En-tête de la carte -->
+    <div class="card-header">
+      <h2 class="custom-title">Liste des demandes de contact archivées</h2>
+    </div>
+    <!-- Corps de la carte -->
+    <div class="card-body">
+      <!-- Grille pour afficher les demandes archivées -->
+      <div class="row">
+        <!-- Boucle sur les demandes archivées -->
+        <div class="col-md-4 mb-4" *ngFor="let request of archivedRequests">
+          <!-- Carte pour une demande archivée -->
+          <div class="card h-100 request-card">
+            <!-- Corps de la carte de la demande -->
+            <div class="card-body">
+              <!-- Nom et icône de la personne -->
+              <h5 class="card-title text-primary">
+                <i class="bi bi-person-circle me-2 icon-person"></i> {{ request.fullName }}
+              </h5>
+              <!-- Email et icône de l'enveloppe -->
+              <p class="card-text">
+                <i class="bi bi-envelope me-2 icon-envelope"></i> <strong>Email:</strong> {{ request.email }}
+              </p>
+              <!-- Téléphone et icône du téléphone -->
+              <p class="card-text">
+                <i class="bi bi-telephone me-2 icon-telephone"></i> <strong>Téléphone:</strong> {{ request.phone }}
+              </p>
+              <!-- Sujet et icône du chat texte -->
+              <p class="card-text">
+                <i class="bi bi-chat-text me-2 icon-chat-text"></i> <strong>Sujet:</strong> {{ request.subject }}
+              </p>
+              <!-- Message et icône de la carte texte -->
+              <p class="card-text">
+                <i class="bi bi-card-text me-2 icon-card-text"></i> <strong>Message:</strong> {{ request.message }}
+              </p>
+              <!-- Date d'envoi et icône de l'événement du calendrier -->
+              <p class="card-text">
+                <i class="bi bi-calendar-event me-2 icon-calendar-event"></i> <strong>Date d'envoi:</strong> {{ request.sendingDate }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Message d'alerte si aucune demande archivée n'est trouvée -->
+      <div *ngIf="archivedRequests.length === 0" class="alert alert-warning" role="alert">
+        Aucune demande de contact archivée trouvée.
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+/* Styles pour l'en-tête de la carte */
+.card-header {
+  font-weight: bold;
+  background-color: #f8f9fa;
+}
+
+/* Styles pour la carte de demande */
+.request-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Styles pour la carte de demande au survol */
+.request-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Styles pour le pied de la carte */
+.card-footer {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Styles pour le texte de la carte */
+.card-text {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Styles pour le titre de la carte */
+.card-title {
+  font-size: 1.4rem;
+}
+
+/* Styles pour les boutons de petite taille */
+.btn-sm {
+  font-weight: bold;
+}
+
+/* Styles pour les icônes de la carte */
+.icon-person {
+  color: #007bff;
+}
+
+.icon-envelope {
+  color: #28a745;
+}
+
+.icon-telephone {
+  color: #dc3545;
+}
+
+.icon-chat-text {
+  color: #ffc107;
+}
+
+.icon-card-text {
+  color: #17a2b8;
+}
+
+.icon-calendar-event {
+  color: #6c757d;
+}
+
+/* Styles pour l'icône de la corbeille dans le bouton */
+.icon-trash-btn {
+  color: #fff;
+}
+
+/* Styles pour l'icône d'archivage dans le bouton */
+.icon-archive-btn {
+  color: #fff;
+}

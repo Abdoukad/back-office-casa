@@ -1,0 +1,71 @@
+<div class="container mt-5">
+  <div class="card">
+    <!-- En-tête de la carte -->
+    <div class="card-header">
+      <h2 class="custom-title">Liste des demandes de contact</h2>
+    </div>
+    <!-- Corps de la carte -->
+    <div class="card-body">
+      <div class="row">
+        <!-- Boucle sur les demandes de contact -->
+        <div *ngFor="let request of contactRequests" class="col-md-4 mb-4">
+          <!-- Carte pour chaque demande de contact -->
+          <div class="card h-100 request-card">
+            <!-- Corps de la carte de demande -->
+            <div class="card-body">
+              <!-- Nom complet -->
+              <h5 class="card-title text-primary">
+                <i class="bi bi-person-circle me-2 icon-person"></i>
+                {{ request.fullName }}
+              </h5>
+              <!-- Email -->
+              <p class="card-text">
+                <i class="bi bi-envelope me-2 icon-envelope"></i>
+                <strong>Email:</strong> {{ request.email }}
+              </p>
+              <!-- Téléphone -->
+              <p class="card-text">
+                <i class="bi bi-telephone me-2 icon-telephone"></i>
+                <strong>Téléphone:</strong> {{ request.phone }}
+              </p>
+              <!-- Sujet -->
+              <p class="card-text">
+                <i class="bi bi-chat-text me-2 icon-chat-text"></i>
+                <strong>Sujet:</strong> {{ request.subject }}
+              </p>
+              <!-- Message -->
+              <p class="card-text">
+                <i class="bi bi-card-text me-2 icon-card-text"></i>
+                <strong>Message:</strong> {{ request.message }}
+              </p>
+              <!-- Date d'envoi -->
+              <p class="card-text">
+                <i class="bi bi-calendar-event me-2 icon-calendar-event"></i>
+                <strong>Date d'envoi:</strong> {{ request.sendingDate }}
+              </p>
+            </div>
+            <!-- Pied de carte avec les actions (supprimer et archiver) -->
+            <div class="card-footer d-flex justify-content-between align-items-center">
+              <div>
+                <!-- Bouton Supprimer -->
+                <button (click)="deleteRequest(request.id)" class="btn btn-sm btn-danger me-2">
+                  <i class="bi bi-trash me-2 icon-trash"></i>
+                  Supprimer
+                </button>
+                <!-- Bouton Archiver -->
+                <button (click)="archiveRequest(request.id)" class="btn btn-sm btn-warning">
+                  <i class="bi bi-archive me-2 icon-archive"></i>
+                  Archiver
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Message d'alerte si aucune demande de contact trouvée -->
+      <div *ngIf="contactRequests.length === 0" class="alert alert-warning" role="alert">
+        Aucune demande de contact trouvée.
+      </div>
+    </div>
+  </div>
+</div>

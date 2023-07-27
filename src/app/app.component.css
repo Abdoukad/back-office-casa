@@ -1,0 +1,13 @@
+/* CSS pour l'animation de la barre de navigation */
+
+/* Transition pour la propriété max-height */
+.collapse.navbar-collapse {
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+}
+
+/* Ajoute la hauteur auto lorsque la classe "show" est ajoutée */
+.collapse.navbar-collapse.show {
+  max-height: 1000px;
+  transition: max-height 0.3s ease-in;
+}

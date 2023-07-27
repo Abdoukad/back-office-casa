@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <!-- Lien vers la page d'accueil de l'application (généralement la page d'accueil) -->
+    <a class="navbar-brand" href="#">My Back Office</a>
+    <!-- Bouton qui apparait en vue réduite (vue mobile généralement) pour afficher les liens de la navbar -->
+    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Conteneur des liens de la navbar qui se replie en vue réduite -->
+    <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse" id="navbarNav">
+      <!-- Liste des liens de la navbar -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <!-- Lien vers la page des demandes de contact -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/request/contact-requests" routerLinkActive="active">Demandes de contact</a>
+        </li>
+        <!-- Lien vers la page des demandes archivées -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/request/archived-requests">Demandes archivées</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
