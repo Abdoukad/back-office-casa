@@ -12,12 +12,13 @@ import { AdminRoutingModule } from './pages/admin/admin-routing.module';
 import { AdminModule } from './pages/admin/admin.module';
 import { SharedModule } from './pages/shared/shared/shared.module';
 import { HeaderComponent } from './pages/layout/header/header.component';
+import {AuthModule} from "./pages/layout/auth/auth.module";
 
 const COMPENENTS = [
   AppComponent, // Composant principal de l'application
   HeaderComponent
 ];
-const MODULES = [  
+const MODULES = [
   BrowserModule, // Module de base pour l'application Web
   AppRoutingModule, // Module de routage
   HttpClientModule, // Module pour les services HTTP
@@ -28,7 +29,8 @@ const MODULES = [
   RouterModule, // Module de routage,
   AdminModule,
   AdminRoutingModule,
-  SharedModule
+  SharedModule,
+    AuthModule
 ];
 
 @NgModule({

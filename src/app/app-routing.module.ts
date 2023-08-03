@@ -10,10 +10,11 @@ import { AppComponent } from './app.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'auth/login',
     pathMatch: 'full'
   },
   { path: 'request', loadChildren: () => import('./pages/request/request.module').then(m => m.RequestModule) },
+  { path: 'auth', loadChildren: () => import('./pages/layout/auth/auth.module').then(m => m.AuthModule) }, // ajout de cette ligne
 ];
 
 @NgModule({
